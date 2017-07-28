@@ -1,0 +1,14 @@
+{
+  "name": "chat-node",
+  "version": "0.0.1",
+  "description": "chat server using node.js and socket.io",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeremy-miller/chat-node"
+  },
+  "private": true,
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
