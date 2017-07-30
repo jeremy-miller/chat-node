@@ -1,5 +1,7 @@
 "use strict";
 
+require('dotenv').config();
+
 var express = require("express")
 var app = express();
 var http = require("http").Server(app);
@@ -13,6 +15,6 @@ app.get("/", routes.base);
 
 io.on("connection", sockets.onConnect);
 
-http.listen(3000, function() {
-  console.log("server started at http://localhost:3000");
+http.listen(process.env.NODE_PORT, function() {
+  console.log("server started at http://localhost:" + process.env.NODE_PORT);
 });
