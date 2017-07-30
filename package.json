@@ -9,8 +9,8 @@
   },
   "private": true,
   "scripts": {
-    "start": "node index.js"
-    //"test": ""
+    "start": "node index.js",
+    "test": "TBD"
   },
   "dependencies": {
     "express": "4.15.3",
