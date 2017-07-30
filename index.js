@@ -1,32 +1,18 @@
 "use strict";
 
-var express = require('express')
+var express = require("express")
 var app = express();
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
+var http = require("http").Server(app);
+var io = require("socket.io")(http);
+var routes = require("./lib/routes");
+var sockets = require("./lib/sockets")(io);
 
-app.use('/static', express.static(__dirname + "/static"));  // expose static files
+app.use("/static", express.static(__dirname + "/static"));  // expose static files
 
-app.get('/', defaultRoute);
+app.get("/", routes.base);
 
-http.listen(3000, listen);
+io.on("connection", sockets.onConnect);
 
-io.on('connection', socketConnection);
-
-function defaultRoute(req, res) {
-  res.sendFile(__dirname + '/static/index.html');
-}
-
-function listen() {
-  console.log('listening on *:3000');
-}
-
-function socketConnection(socket) {
-  io.emit('user connected');
-  socket.on('chat message', function(msg) {
-    io.emit('chat message', msg);
-  });
-  socket.on('disconnect', function() {
-    io.emit('user disconnected');
-  });
-}
+http.listen(3000, function() {
+  console.log("server started at http://localhost:3000");
+});
