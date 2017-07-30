@@ -1,6 +1,9 @@
-var app = require('express')();
+var express = require('express')
+var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+
+app.use('/static', express.static(__dirname + "/static"));  // expose static files
 
 app.get('/', defaultRoute);
 
@@ -9,7 +12,7 @@ http.listen(3000, listen);
 io.on('connection', socketConnection);
 
 function defaultRoute(req, res) {
-  res.sendFile(__dirname + '/public/view/index.html');
+  res.sendFile(__dirname + '/static/index.html');
 }
 
 function listen() {
@@ -17,11 +20,11 @@ function listen() {
 }
 
 function socketConnection(socket) {
-  console.log('a user connected');
+  io.emit('user connected');
   socket.on('chat message', function(msg) {
     io.emit('chat message', msg);
   });
   socket.on('disconnect', function() {
-    console.log('a user disconnected');
+    io.emit('user disconnected');
   });
 }
