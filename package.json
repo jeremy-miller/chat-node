@@ -10,7 +10,7 @@
   "private": true,
   "scripts": {
     "start": "node index.js",
-    "test": "TBD"
+    "test": "mocha lib/**/**.spec.js"
   },
   "dependencies": {
     "dotenv": "4.0.0",
@@ -23,6 +23,7 @@
     "eslint-config-prettier": "2.3.0",
     "eslint-plugin-import": "2.7.0",
     "eslint-plugin-prettier": "2.1.2",
+    "mocha": "3.4.2",
     "prettier": "1.5.3"
   }
 }
