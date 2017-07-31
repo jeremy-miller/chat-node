@@ -14,8 +14,6 @@ app.get("/", routes.base);
 
 io.on("connection", sockets.onConnect);
 
-function listen() {
-  console.log(`server started at http://localhost:${process.env.NODE_PORT}`);
-}
-
-http.listen(process.env.NODE_PORT, listen);
+http.listen(process.env.NODE_PORT, () =>
+  console.log(`server started at http://localhost:${process.env.NODE_PORT}`)
+);
