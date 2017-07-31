@@ -10,8 +10,7 @@
   "private": true,
   "scripts": {
     "start": "node index.js",
-    "test": "TBD",
-    "lint": "node_modules/.bin/eslint index.js \"lib/**\" \"static/js/**\" \"test/**\" --fix"
+    "test": "TBD"
   },
   "dependencies": {
     "dotenv": "4.0.0",
