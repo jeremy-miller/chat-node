@@ -26,7 +26,7 @@ Chat server using Node.js and Socket.io.  This project is based on [this](https:
 </details>
 
 ## Motivation
-I created this project to try the following:
+I created this project to try:
 - Using Javascript as a server-side language
 - The latest version of [Node.js](https://nodejs.org/en/)
 - Building a web server using [Express.js](https://expressjs.com/)
