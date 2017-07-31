@@ -10,7 +10,8 @@
   "private": true,
   "scripts": {
     "start": "node index.js",
-    "test": "mocha lib/**/**.spec.js"
+    "test": "mocha lib/**/**.spec.js",
+    "lint": "node_modules/.bin/eslint index.js \"lib/**\" \"static/js/**\" --fix"
   },
   "dependencies": {
     "dotenv": "4.0.0",
