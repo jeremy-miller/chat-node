@@ -1,20 +1,21 @@
-"use strict";
+const express = require("express"); // eslint-disable-line import/newline-after-import
+const app = express();
+const http = require("http").Server(app);
+const io = require("socket.io")(http);
+const routes = require("./lib/routes");
+const sockets = require("./lib/sockets")(io);
+const path = require("path");
 
-require('dotenv').config();
+require("dotenv").config();
 
-var express = require("express")
-var app = express();
-var http = require("http").Server(app);
-var io = require("socket.io")(http);
-var routes = require("./lib/routes");
-var sockets = require("./lib/sockets")(io);
-
-app.use("/static", express.static(__dirname + "/static"));  // expose static files
+app.use("/static", express.static(path.join(__dirname, "/static"))); // expose static files
 
 app.get("/", routes.base);
 
 io.on("connection", sockets.onConnect);
 
-http.listen(process.env.NODE_PORT, function() {
-  console.log("server started at http://localhost:" + process.env.NODE_PORT);
-});
+function listen() {
+  console.log(`server started at http://localhost:${process.env.NODE_PORT}`);
+}
+
+http.listen(process.env.NODE_PORT, listen);

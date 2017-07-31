@@ -1,16 +1,12 @@
-"use strict";
+/* global io $ */
 
-var socket = io();
+const socket = io();
 
-$("form").submit(function() {
+$("form").submit(() => {
   socket.emit("chat message", $("#message").val());
   $("#message").val("");
   return false;
 });
-
-socket.on("chat message", chatMessage);
-socket.on("user connected", userConnected);
-socket.on("user disconnected", userDisconnected);
 
 function chatMessage(msg) {
   $("#messages").append($("<li>").text(msg));
@@ -23,3 +19,7 @@ function userConnected() {
 function userDisconnected() {
   $("#messages").append($("<li>").text("--- user disconnected ---"));
 }
+
+socket.on("chat message", chatMessage);
+socket.on("user connected", userConnected);
+socket.on("user disconnected", userDisconnected);
