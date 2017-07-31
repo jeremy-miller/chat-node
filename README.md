@@ -12,5 +12,4 @@ node_modules/.bin/eslint index.js "lib/**" "static/js/**" "test/**" --fix
 - Coveralls
 - Codacy
 - Code Climate
-- License badge
 - Nodejs version badge
