@@ -10,7 +10,6 @@
   "private": true,
   "scripts": {
     "start": "node index.js",
-    "test": "mocha test/**/**.spec.js lib/**/**.spec.js",
     "lint": "node_modules/.bin/eslint index.js \"lib/**\" \"static/js/**\" \"test/**\" --fix"
   },
   "dependencies": {
@@ -19,13 +18,11 @@
     "socket.io": "2.0.3"
   },
   "devDependencies": {
-    "chai": "4.1.0",
     "eslint": "4.3.0",
     "eslint-config-airbnb-base": "11.3.1",
     "eslint-config-prettier": "2.3.0",
     "eslint-plugin-import": "2.7.0",
     "eslint-plugin-prettier": "2.1.2",
-    "mocha": "3.4.2",
     "prettier": "1.5.3"
   }
 }
