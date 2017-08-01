@@ -1,5 +1,3 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9a6d8f2efbe04471aab898631137e1af)](https://www.codacy.com/app/jgmiller88/chat-node)
-[![Code Climate](https://codeclimate.com/github/jeremy-miller/chat-node/badges/gpa.svg)](https://codeclimate.com/github/jeremy-miller/chat-node)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jeremy-miller/chat-node/blob/master/LICENSE)
 [![Node Version](https://img.shields.io/badge/Node-8.2-blue.svg)]()
 
