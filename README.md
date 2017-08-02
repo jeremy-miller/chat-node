@@ -25,19 +25,21 @@ I created this project to try:
 - ES6
 
 ## Usage
-TBD
+This implementation uses a Docker container to isolate the execution environment.
 
 ### Prerequisites
-TBD
+- [Docker](https://docs.docker.com/engine/installation/)
 
 ### Build
-TBD
+Before viewing any solutions, the Docker container must be built: ```docker build -t jeremymiller/chat-node .```
 
 ### Lint
-```npm run-script lint```
+To run [ESLint](http://eslint.org/) on the Javascript files in the repository, execute the following command: ```docker run -it --rm jeremymiller/chat-node npm run-script lint```
 
 ### Run
-```npm start```
+1. To run the chat server by executing the following command: ```docker run -it --rm jeremymiller/chat-node```
+2. Connect to `http://localhost:3000` in your web browser
+3. Begin chatting!
 
 ## License
 [MIT](https://github.com/jeremy-miller/chat-node/blob/master/LICENSE)
