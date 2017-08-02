@@ -37,7 +37,7 @@ Before viewing any solutions, the Docker container must be built: ```docker buil
 To run [ESLint](http://eslint.org/) on the Javascript files in the repository, execute the following command: ```docker run -it --rm jeremymiller/chat-node npm run-script lint```
 
 ### Run
-1. To run the chat server by executing the following command: ```docker run -it --rm jeremymiller/chat-node```
+1. To run the chat server by executing the following command: ```docker run -it --rm -p 3000:3000 jeremymiller/chat-node```
 2. Connect to `http://localhost:3000` in your web browser
 3. Begin chatting!
 
