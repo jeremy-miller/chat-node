@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/jeremy-miller/chat-node.svg?branch=master)](https://travis-ci.org/jeremy-miller/chat-node)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jeremy-miller/chat-node/blob/master/LICENSE)
 [![Node Version](https://img.shields.io/badge/Node-8.2-blue.svg)]()
 
