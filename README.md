@@ -5,17 +5,14 @@
 # Chat
 Chat server using Node.js and Socket.io.  This project is based on [this](https://socket.io/get-started/chat/) tutorial.
 
-<details>
-<summary><strong>Table of Contents</strong></summary>
-
-* [Motivation](#motivation)
-* [Usage](#usage)
-  + [Prerequisites](#prerequisites)
-  + [Build](#build)
-  + [Lint](#lint)
-  + [Run](#run)
-* [License](#license)
-</details>
+## Table of Contents
+- [Motivation](#motivation)
+- [Usage](#usage)
+  - [Prerequisites](#prerequisites)
+  - [Build](#build)
+  - [Lint](#lint)
+  - [Run](#run)
+- [License](#license)
 
 ## Motivation
 I created this project to try:
